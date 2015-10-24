@@ -1,0 +1,144 @@
+<script>
+    $(document).ready(function() {
+        $("a.group-gp").colorbox({rel: 'group-gp', transition:"fade",iframe:function(){
+            return !!$(this).hasClass('youtube');}, innerWidth:"80%", innerHeight:"50%",initialWidth:300,initialHeight:100});
+        $("a.group-10").colorbox({rel: 'group-10', transition:"fade", innerWidth:"80%", innerHeight:"50%",initialWidth:300,initialHeight:100});
+        $("a.group-25").colorbox({rel: 'group-25', transition:"fade", innerWidth:"80%", innerHeight:"50%",initialWidth:300,initialHeight:100});
+        $("a.group-50").colorbox({rel: 'group-50', transition:"fade", innerWidth:"80%", innerHeight:"50%",initialWidth:300,initialHeight:100});
+        $("a.group-5").colorbox({rel: 'group-5', transition:"fade", innerWidth:"80%", innerHeight:"50%",initialWidth:300,initialHeight:100});
+    });
+</script>
+<!-- Facebook Conversion Code for Registrations - MM -->
+<script>(function() {
+    var _fbq = window._fbq || (window._fbq = []);
+    if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+    }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6033860326663', {'value':'0.00','currency':'USD'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6033860326663&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+
+<div class="header">
+    <div class="content">
+        <p class="logo brandon">Maltese Militia</p>
+    </div>
+</div>
+
+<div class="hero">
+    <div class="page-content clearfix">
+        <div class="mammoth">
+            <span class="need brandon"></span>
+        </div>
+        <div class="share-wrap">
+            <p class="why brandon">Don't leave your brothers behind</p>
+            <p class="title brandon">INVITE FRIENDS &<br>Earn Product</p>
+            <p class="subtitle brandon">Share your unique link via email, Facebook or Twitter and earn Maltese Militia goods for each friend who signs up.</p>
+            <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
+            <% twitter_message = "@maltesemilitia is Coming! Check out this #firefighter apparel line contest " %>
+            <div class="social-links">
+                <a href="mailto:?subject=Check out this firefighter apparel line&body=Check out this firefighter apparel line.  Invite friends, earn product.  <%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" class="ltr"></a>
+                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
+                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% 
+    referrals_count = @user.referrals.count
+
+    stops = User::REFERRAL_STEPS
+
+    found = nil
+
+    stops.reverse_each { |stop|
+        if stop["count"] <= referrals_count and !found
+            stop["selected"] = true
+            found = stop
+        else
+            stop["selected"] = false
+        end
+    }   
+ %>
+<div class="prizes <% if found %>prize-<%= found["class"] %><% end %> <% if @gp==@user.referred and @gp > 50 %>grand-prize<% end %>">
+    <div class="page-content">
+        <p class="callout brandon">Here's How It Works:</p>
+        <ul class="products clearfix">
+            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Product Earned</p></li>
+            <% stops.each do |stop| %>
+                <li class="product brandon <% if stop["selected"] %>selected<% end %>">
+                    <a class="circle group-<%= stop["count"] %>" href="<%= stop["fslide"] %>" style="cursor:pointer"><%= stop["count"] %></a>
+                    <div class="sep"></div>
+                    <p><%= stop["html"].html_safe %></p>
+
+                    <div class="tooltip" <% if stop["class"] == 'five'%>style="width: 338px;left: -112px;"<%end%>>
+                        <a href="<%= stop["fslide"] %>" style="cursor:pointer"><img src="<%= stop["image"] %>" height="254"></a>
+                    </div>
+                </li>
+            <% end %>
+          <li class="product brandon <% if @gp==@user.referred and @gp > 50 %>selected<% end %> last">
+            <a href="<%=ActionController::Base.helpers.asset_path('refer/grand-prize/axe-1.jpg')%>" class="circle group-gp" style="cursor:pointer"><%=@gp%></a>
+            <div class="sep"></div>
+            <p>Grand Prize</p>
+
+            <div class="tooltip" style="width: 250px;left: -66px;">
+              <img src="<%=ActionController::Base.helpers.asset_path('refer/thumbnail-grand-prize-v2.jpg')%>" height="254">
+            </div>
+          </li>
+        </ul>
+
+        <div class="progress">
+            <div class="mover">
+                <div class="bar clearfix"></div>
+            </div>
+        </div>
+
+        <% 
+            words = ''
+            if referrals_count == 1
+                words = 'friend has'
+            elsif 
+                words = 'friends have'
+            end
+
+        %>
+
+        <% if referrals_count == 0 %>
+            <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+        <% else %>
+            <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+        <% end %>
+
+        <p class="ship brandon">Contestants must be U.S. Residents.</p>
+      <div style="color:#cccccc;margin: 0 auto;height:30px; width:250px">
+          <a class="policy brandon" href="/terms-and-conditions" target="_blank">Official Terms & Conditions</a> | <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  <a class="group-50" href="/assets/refer/hat-bandana/bandana-2.jpg" style="display:none;"></a>
+  <a class="group-50" href="/assets/refer/hat-bandana/bandana-3.jpg" style="display:none;"></a>
+  <a class="group-50" href="/assets/refer/hat-bandana/hat-1.jpg" style="display:none;"></a>
+  <a class="group-50" href="/assets/refer/hat-bandana/hat-2.jpg" style="display:none;"></a>
+  <a class="group-50" href="/assets/refer/hat-bandana/hat-3.jpg" style="display:none;"></a>
+
+  <a class="group-5" href="/assets/refer/stickers/stickers-2.jpg" style="display:none;"></a>
+  <a class="group-5" href="/assets/refer/stickers/stickers-3.jpg" style="display:none;"></a>
+
+
+  <a class="group-25" href="/assets/refer/t-shirt/t-shirt-2.jpg" style="display:none;"></a>
+  <a class="group-25" href="/assets/refer/t-shirt/t-shirt-3.jpg" style="display:none;"></a>
+
+  <a class="group-10" href="/assets/refer/wrist-wraps/wrist-wraps-2.jpg" style="display:none;"></a>
+  <a class="group-10" href="/assets/refer/wrist-wraps/wrist-wraps-3.jpg" style="display:none;"></a>
+
+  <a class="group-gp" href="/assets/refer/grand-prize/axe-2.jpg" style="display:none;"></a>
+  <a class="group-gp" href="/assets/refer/grand-prize/axe-3.jpg" style="display:none;"></a>
+  <a class="group-gp" href="/assets/refer/grand-prize/axe-4.jpg" style="display:none;"></a>
+  <a class="group-gp youtube" href="https://www.youtube.com/embed/4kS68kR5aXI?version=3&amp;vq=hd720&amp;autoplay=1&amp;modestbranding=1&amp;rel=0" style="display:none;"></a>
+</div>

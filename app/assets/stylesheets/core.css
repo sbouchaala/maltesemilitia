@@ -1,0 +1,855 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require_self
+ *= require colorbox
+ */
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('/assets/HelveticaNeue.eot?#iefix') format('embedded-opentype'),  url('/assets/HelveticaNeue.woff') format('woff'), url('/assets/HelveticaNeue.ttf')  format('truetype'), url('/assets/HelveticaNeue.svg#HelveticaNeue') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+form{
+    margin-bottom: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* Home */
+
+html.home{
+    background: #000;
+}
+html.refer{
+    background: #1e1e1e;
+}
+
+#home{
+    padding-bottom: 50px;
+}
+
+#home .page-content{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+#home .hero{
+    width: 100%;
+    height: 446px;
+    background: url(/assets/home/Fire-Engine-.jpg) center center no-repeat;
+    background-size: 1600px 446px;
+    overflow: hidden;
+    position: relative;
+    letter-spacing: .09em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#home .hero .large{
+    font-weight: bold;
+    font-size: 38px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 60px 0 0 80px;
+    width: 360px;
+    height:110px;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 2px;
+    background: url('/assets/Logo-White.png') center center no-repeat;
+    background-size: cover;
+}
+
+#home .hero .small{
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+    margin: 10px 0 0 80px;
+    line-height: 30px;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    width: 360px;
+    letter-spacing: 1px;
+}
+
+#home .form-wrap{
+    height: 80px;
+    width: 411px;
+    margin: 23px auto 0;
+}
+
+#home .form-wrap .key{
+    width: 46px;
+    height: 19px;
+    margin: 0 auto;
+    background: url(/assets/home/key.png) 0 0 no-repeat;
+    background-size: 46px 19px;
+}
+
+#home .form-wrap .byline{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+#home .form-wrap .email{
+    float: left;
+    font-size: 13px;
+    padding: 8px 0 8px 10px;
+    height: 22px;
+    border: 1px solid #ad0303;
+    width: 256px;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+#home .form-wrap .submit{
+    width: 143px;
+    background: #ad0303;
+    float: left;
+    height: 40px;
+    line-height: 37px;
+    color: #FFF;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: 0;
+    letter-spacing: 2px;
+}
+
+#home .form-wrap.ended{
+    width: 500px;
+    margin-top: 27px;
+}
+
+#home .form-wrap.ended .thanks{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #870000;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 36px;
+    margin-bottom: 14px;
+}
+
+#home .form-wrap.ended .compiling{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #555556;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+#home .form-wrap.ended .go-to{
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#home .form-wrap.ended .go-to a{
+    color: #870000;
+    font-size: 19px;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+}
+
+#home .form-wrap.ended .go-to a:hover{
+    color: #955F5D;
+}
+
+#home .form-wrap.ended .again{
+    font-weight: 500;
+    color: #555556;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+}
+
+#home .form-wrap.ended{
+    width: 500px;
+    margin-top: 27px;
+}
+
+#home .form-wrap.ended .thanks{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #870000;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 36px;
+    margin-bottom: 14px;
+}
+
+#home .form-wrap.ended .compiling{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #555556;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+#home .form-wrap.ended .go-to{
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#home .form-wrap.ended .go-to a{
+    color: #870000;
+    font-size: 19px;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+}
+
+#home .form-wrap.ended .go-to a:hover{
+    color: #955F5D;
+}
+
+#home .form-wrap.ended .again{
+    font-weight: 500;
+    color: #555556;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+/* Refer a friend page */
+
+.wf-loading .brandon{
+    visibility: hidden;
+}
+
+.brandon{
+    font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+
+.militia{
+    font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+
+#refer{
+    background: #FFF;
+}
+
+#refer .page-content{
+    width: 1150px;
+    margin: 0 auto;
+    z-index: 0;
+    position: relative;
+}
+
+#refer .header{
+    height: 50px;
+    background: #870000;
+    width: 100%;
+    overflow:hidden;
+    z-index: 1;
+    position: relative;
+}
+
+#refer .header .content{
+    width: 225px;
+    margin: 0 auto;
+}
+
+#refer .header p{
+    float: left;
+    color: #FFF;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+#refer .header .byline{
+    font-size: 14px;
+}
+
+#refer .header .logo{
+    font-weight: normal;
+    font-size: 0;
+    line-height: 0;
+    background: url(/assets/refer/textlogo.png) 0 0 no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 225px;
+    margin-top: 16px;
+}
+
+#refer .hero{
+    background: #000;
+    height: 550px;
+    overflow: hidden;
+}
+
+#refer .mammoth{
+    width: 612px;
+    height: 460px;
+    background: url(/assets/refer/Firefighter-pg2.jpg) 0 0 no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 45px;
+    float: left;
+}
+
+#refer .mammoth .need{
+    color: #FFF;
+    font-size: 38px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 102px 0 0 72px;
+    display: block;
+    line-height: 56px;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 284px;
+}
+
+#refer .share-wrap{
+    float: right;
+    width: 420px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .13em;
+    margin-right: 60px;
+    height: 565px;
+}
+
+#refer .share-wrap .why{
+    font-size: 16px;
+    color: #cccccc;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+#refer .share-wrap .title{
+    font-size: 34px;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FFF;
+    margin-top: 45px;
+    letter-spacing: .13em;
+}
+
+#refer .share-wrap .subtitle{
+    color: #cccccc;
+    font-size: 16px;
+    text-transform: none;
+    margin-top: 40px;
+}
+
+#refer .share-wrap .copy-link{
+    border: 1px solid #D1D0C7;
+    background: #FFF;
+    padding: 10px 0;
+    width: 320px;
+    text-transform: none;
+    font-size: 11px;
+    margin: 40px auto 0;
+}
+
+#refer .share-wrap .social-links{
+    width: 210px;
+    height: 50px;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+#refer .share-wrap .social-links a, #refer .share-wrap .social-links div{
+    display: inline-block;
+}
+
+#refer .share-wrap .social-links .fb{
+    background: url(/assets/refer/facebook.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+#refer .share-wrap .social-links .ltr{
+    background: url(/assets/refer/email.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+#refer .share-wrap .social-links .twit{
+    background: url(/assets/refer/twitter.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+#refer .share-wrap .social-links .fb:hover{
+    background: url(/assets/refer/hfacebook.png);
+    background-size: cover;
+}
+#refer .share-wrap .social-links .ltr:hover{
+    background: url(/assets/refer/hemail.png);
+    background-size: cover;
+}
+
+#refer .share-wrap .social-links .twit:hover{
+    background: url(/assets/refer/htwitter.png);
+    background-size: cover;
+}
+
+#refer .share-wrap .social-links .sep{
+    height: 28px;
+    width: 1px;
+    background: #BAB9BA;
+    margin: 0 20px;
+}
+
+#refer .prizes{
+    width: 100%;
+    background: #1e1e1e;
+    border-top: 1px solid #555555;
+    padding-bottom: 20px;
+}
+
+#refer .prizes .page-content{
+    position: relative;
+}
+
+#refer .prizes .callout{
+    text-align: center;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#refer .prizes .progress{
+    height: 6px;
+    width: 100%;
+    background: #FFF;
+    position: absolute;
+    top: 100px;
+    z-index: 0;
+}
+
+#refer .prizes .progress .mover{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#refer .prizes .progress .mover .bar{
+    background: #870000;
+    width: 165px;
+    height: 6px;
+    background-size: 1px 4px;
+}
+
+#refer .prize-two .progress .mover .bar{ width: 294px; }
+#refer .prize-three .progress .mover .bar{ width: 494px; }
+#refer .prize-four .progress .mover .bar{ width: 690px; }
+#refer .prize-five .progress .mover .bar{ width: 888px; }
+#refer .grand-prize .progress .mover .bar{ width: 1150px; }
+
+
+#refer .prizes ul.products{
+    height: 105px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+#refer .prizes .products li.title{
+    height: 100%;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 14px;
+    float: left;
+    margin-right: 68px;
+    width: 165px;
+    font-weight: bold;
+}
+
+#refer .prizes .products li.title .friends{
+    margin-top: 7px;
+    letter-spacing: 2px;
+}
+
+#refer .prizes .products li.title .rewards{
+    margin-top: 60px;
+    letter-spacing: 2px;
+}
+
+#refer .prizes .products li.product{
+    height: 100%;
+    color: #FFF;
+    width: 125px;
+    margin-right: 72px;
+    float: left;
+    position: relative;
+}
+
+#refer .prizes .products li.product .circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    border: 1px solid #DAD9D2;
+    text-align: center;
+    line-height: 40px;
+    color: #868282;
+    overflow: hidden;
+    background: #F1F0EE;
+    font-weight: bold;
+    margin: 0 auto;
+    display:block;
+    text-decoration: none;
+}
+
+#refer .prizes .products li.product .sep{
+    width: 12px;
+    height: 2px;
+    background: transparent;
+    margin: 20px auto;
+}
+
+#refer .prizes .products li.product .caret{
+    width: 100%;
+    height: 10px;
+    background: url(/assets/refer/caret.png) center center no-repeat;
+    background-size: 16px 10px;
+    position: absolute;
+    bottom: -15px;
+}
+
+#refer .prizes .products li.product.selected .caret{
+    background: url(/assets/refer/caret-selected.png) center center no-repeat;
+    background-size: 16px 10px;
+}
+
+#refer .prizes .products li.product p{
+    text-align: center;
+    font-weight: 500;
+}
+
+#refer .prizes .products li.product:last-child{
+    margin-right: 0;
+}
+
+#refer .prizes .products li.product.last{
+    margin-right: 0;
+}
+
+#refer .prizes .products li.product.selected .circle{
+    background: #870000 !important;
+    border-color: #870000 !important;
+    color: #FFF !important;
+}
+
+
+#refer .prizes .products li.product.selected p{
+    color: #870000 !important;
+}
+
+#refer .prizes .products li.product:hover .circle{
+    color: #FFF;
+    background: #870000;
+    border-color: #870000;
+}
+
+#refer .prizes .products li.product .tooltip{
+    height: 254px;
+    width: 169px;
+    border: 4px solid #870000;
+    position: absolute;
+    top: -285px;
+    left: -32px;
+    display: none;
+    background: #FFF;
+}
+
+#refer .prizes .products li.product .tooltip img{
+    margin: 0 auto;
+    display: block;
+}
+
+#refer .prizes .products li.product:hover .tooltip{
+    display: block;
+}
+
+#refer .prizes p.place{
+    text-align: center;
+    font-size: 16px;
+    color: #FFF;
+    width: 100%;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+#refer .prizes p.place span{
+    color: #FD2E2E;
+}
+
+#refer .prizes p.check{
+    text-align: center;
+    font-size: 16px;
+    color: #cccccc;
+    width: 100%;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+#refer .prizes p.ship{
+    text-align: center;
+    font-size: 16px;
+    color: #cccccc;
+    width: 100%;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+#refer .prizes a.policy{
+    text-align: center;
+    font-size: 12px;
+    color: #CCCCCC;
+    width: 100%;
+    font-weight: 500;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    #refer .page-content {
+    width: 100%;
+}
+  #home .hero {    
+    height: 315px;
+  }
+
+  #home .hero .large {    
+    margin: 25px auto;
+    width: 100%;
+    max-width: 360px;
+    height: 95px;
+  }
+  #home .hero .small { 
+    width: 100%; 
+    max-width: 360px;  
+    margin: 10px auto;
+  }
+  #home .form-wrap .byline {    
+    margin: 15px auto;    
+  }
+  #home .form-wrap {    
+    margin: 0 auto;    
+    width: 295px;
+  }
+  #home .form-wrap .email {    
+    padding: 8px 0 8px 0px;    
+    text-align: center;    
+    border: none;
+  }
+  #home .form-wrap .email, #home .form-wrap .submit {    
+    width: 100%;    
+    margin-bottom: 5px;
+  }
+   #refer .mammoth {    
+    display: none;
+  }
+  #refer .page-content {    
+    width: 100%;
+  }
+  #refer .share-wrap {    
+    float: none;    
+    width: 100% !important;    
+    background: url(/assets/refer/mobile-bg.jpg) 50% 0 no-repeat;
+    background-size: cover;    
+    margin: 0 auto;
+  }
+  #refer .prizes .callout {    
+    display: none;
+  }
+  #refer .prizes p.place {    
+    display: block;
+    margin-top: -175px;
+      }
+  #refer .prizes .progress {    
+    display: none;
+  }
+/*  #refer .header {    
+    height: 75px;    
+    background: transparent;
+  }*/
+/*  #refer .hero {    
+    margin-top: -80px;    
+    height: auto;    
+    padding-bottom: 40px;
+  }
+  #refer .header .logo {    
+    background: url(/assets/refer/monogram.png) 0 0 no-repeat;    
+    background-size: cover;    
+    height: 73px;    
+    width: 251px;    
+    margin-top: 0px;
+  }*/
+  #refer .share-wrap .why, #refer .share-wrap .subtitle {    
+    margin-left: 10px;    
+    margin-right: 10px;
+  }
+  #refer .share-wrap .why {    
+    margin-top: 0;    
+    padding-top: 30px;
+  }
+  #refer .share-wrap .title{
+    font-size: 30px;
+  }
+  #refer .prizes ul.products{
+    margin-left: 30%;
+}
+  #refer .prizes .products li.title {    
+    display: none;
+  }
+  #refer .prizes .products li.product {    
+    width: 70%;
+    list-style: none;
+  }
+  #refer .prizes .products li.product p {
+    text-align: left;
+    display: block;
+    padding: 0px;
+    margin-top: -37px;
+    margin-left: 100px;
+    width: 115px;
+}
+#refer .prizes .products li.product .sep{
+    display: none;
+}
+
+  #refer .prizes .products li.product .sep {    
+    margin: 5px auto;
+  }
+  #refer .prizes p.ship {    
+    margin-top: 580px;
+  }
+
+  #refer .prizes .products li.product{
+    margin-right: 0;
+    width: 70%;
+    list-style: none;
+  }
+  /*ul.products > li.product:nth-last-of-type(n+3) {    
+    margin-right: 10px !important;    
+    width: 29% !important;
+  }
+  ul.products > li.product:nth-last-of-type(-n+2) {    
+    margin-right: 0 !important;    
+    width: 47% !important;
+  }*/
+    #refer .prizes .products li.product .circle{
+        display: inline-block;
+    }
+  #refer .prizes .products li.product:last-child .circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    border: 1px solid #dad9d2;
+    text-align: center;
+    line-height: 50px;
+    color: #BA782A;
+}
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+/*  #refer .prizes .products li.product {    
+    min-width: 5%;    
+    width: 12%;    
+    margin-right: 10px;
+  }*/
+}
+
+@media screen and (max-width: 320px) {
+  #refer .share-wrap {    
+    float: none;    
+    width: 100%;    
+    background: url(/assets/refer/mobile-bg.jpg) 50% no-repeat;  
+    margin: 0 auto;
+  }
+  #refer .share-wrap .copy-link {    
+    width: 295px;
+  }
+}
+
+@media screen and (max-width: 900px){
+   #refer .share-wrap {
+    width: 50%;
+    margin-right: 0;
+}
+
+#refer .mammoth {
+    width: 50%;
+    background-size: 100% 100%;
+}
+ #refer .page-content {
+    width: 95%;
+}
+   #refer .hero {    
+    height: 625px;
+  }
+}
+/*@media screen and (min-width: 1200px) {
+#refer .prizes .products li.product {
+    width: 15%;
+    list-style: none;
+}
+#refer .mammoth {
+    background-size: cover;
+}
+}*/
